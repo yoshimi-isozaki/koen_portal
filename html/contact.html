@@ -26,19 +26,7 @@
 </nav>
 
 
-
-
-
-
-
-
 <!-- nav_barはPCとSPで一部共有する -->
-  <nav id="nav_bar">
-  <div id="logo_caption">
-  <h1>福岡県の最大級の<span>公園ポータルサイト</span></h1>
-  <div id="space"></div>
-  </div><!-- logo_caption  -->
-
   <nav id="nav_bar">
   <div id="logo_caption">
   <h1>福岡県の最大級の<span>公園ポータルサイト</span></h1>
@@ -58,7 +46,7 @@
 </div><!-- pc_nav_site -->
   <!--- ハンバーガーメニューここから  --->
   <div id="nav-drawer">
-      <input id="nav-input" type="checkbox" class="nav-unshown">
+      <input id="nav-input" type="checkbox" class="nav-unshown" value="ok">
       <label id="nav-open" for="nav-input"><span></span></label>
       <label class="nav-unshown" id="nav-close" for="nav-input"></label>
       <div id="nav-content">
@@ -111,7 +99,7 @@
         <input id="category" type="text" name="category">
         <!-- 内容 -->
         <label for="comment">内容</label>
-        <textarea id="comment" type="text" name="comment"></textarea >
+        <textarea id="comment" accesskey="#" placeholder="お問い合わせ内容をご記入ください" name="comment" rows="4" cols="40"></textarea >
       </form>
 
 
@@ -125,11 +113,11 @@
 
 
 <footer>
-  <span>運営&nbsp株式会社Grow-up</span>
+  <span>運営&nbsp;株式会社Grow-up</span>
   
 </footer>
 </div><!-- wrapper -->
 
-  <script type="text/javascript"　 src="../js/sample.js"></script>
+  <script type="text/javascript" src="../js/sample.js"></script>
 </body>
 </html>
