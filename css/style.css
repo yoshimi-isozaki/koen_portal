@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/* idは1ページ内なら流用してもいい */
 
 
 
@@ -557,9 +556,6 @@ footer span {
   display: flex;
   flex-wrap: wrap;
 }
-.tab-label {
-
-}
 .feat_box {
   padding-top: 1rem;
   border-bottom: 0.1rem solid #707070;
@@ -695,13 +691,13 @@ footer span {
 .tab-label {
     color: #707070;
     border-bottom: 1px solid #707070;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     height: 2.3rem;
     line-height: 0rem;
-    padding: 2rem 2rem;
+    padding: 1rem;
     text-align: center;
     order: -1;
-    width: 12.5rem;
+    width: 9rem;
 }
 .appeal {
     width: 100%;
@@ -712,7 +708,7 @@ footer span {
     font-weight: bold;
     border-bottom: 0.3rem solid #269512;
 }
-.tab-switch:checked+.tab-label+.appeal{
+.tab-switch:checked+.tab-label+.appeal {
      display: block;
      display: flex;
      flex-wrap: wrap;
@@ -723,18 +719,106 @@ footer span {
     display: none;
 }
 
+/* wordmouth_area_incは「マップ」と「基本情報」を内包し幅と高さを決める */
+#wordmouth_area_inc {
+  padding-top: 1rem;
+}
+#wordmouth_area {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+#wordmouth_area a {
+  border: 1px solid #269512;
+  border-radius: 0.5rem;
+  color:  #269512;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 0.8rem 5rem;
+}
+.wordmouth {
+  color: #707070;
+  border: 1px solid #707070;
+  border-radius: 0.5rem;
+  box-shadow: 3px 3px 6px rgba(0,0,0,.15);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.wordmouth h3 {
+  font-weight: bold;
+}
+.wordmouth ul {
+  display: flex;
+  padding: 1rem 1rem 1rem 0;
+}
+.wordmouth li {
+  padding-right: 1rem;
+}
+#form_area {
+  padding: 5rem 0;
+}
+#form_area h3 {
+  padding-bottom: 2rem;
+}
+#form_area label {
+  display: block;
+  color: #707070;
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 2rem 0 1rem 0;
+}
+#form_area textarea, #form_area input[type="text"] {
+  border: 1px solid #707070;
+  border-radius: 0.5rem;
+  width: 100%;
+}
+#form_area select {
+  border: 1px solid #707070;
+  border-radius: 0.5rem;
+  color: #707070;
+  font-size: 1.2rem;
+  padding: 0.5rem 3rem 0.5rem 0.5rem;
+}
+.form_block {
+  display: block;
+}
+.pd_right {
+  padding-right: 1rem;
+}
+#form_area select {
+  -moz-appearance: menulist;
+  -webkit-appearance: menulist;
+}
+#form_area select::-ms-expand {
+  display: block;
+}
+input[type="submit"] {
+  border: 1px solid #269512;
+  border-radius: 0.5rem;
+  background-color: #269512;
+  color:  #fff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 0.8rem 5rem;
+}
+#submit {
+  display: flex;
+  justify-content: center;
+  padding-top: 3rem;
+}
 /* 「もっと表示する」機能css */
-/* https://copypet.jp/502/よりコピペしてくる */
+/* https://copypet.jp/502/よりコピペしてくる 一部改変 */
 .cp_box *, .cp_box *:before, .cp_box *:after {
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
+
 .cp_box {
 	width: auto;
-	margin: 2em auto;
+  margin: 2em auto;
 }
 .cp_box label {
-	font-weight: bold;
 	position: relative;
 	display: block;
 	width: 80%;
@@ -743,39 +827,20 @@ footer span {
 	cursor: pointer;
 	transition: all 0.3s;
 	text-align: center;
-	color: #da3c41;
-	border: 2px solid #da3c41;
-	border-radius: 3px;
+	color: #707070;
 }
 .cp_box label:hover {
-	transition: all 0.3s;
-	color: #ffffff;
-	background: #da3c41;
-}
-.cp_box label::after {
-	font-family: 'FontAwesome';
-	content: ' \f067';
-	color: #da3c41;
-}
-.cp_box label:hover::after {
-	color: #ffffff;
-}
-.cp_box input:checked ~ label::after {
-	font-family: 'FontAwesome';
-	content: ' \f068';
-	color: #da3c41;
-}
-.cp_box input:checked ~ label:hover::after {
-	color: #ffffff;
+  transition: all 0.3s;
+  font-weight: bold;
 }
 .cp_box input {
-	display: none;
+  display: none;
 }
 .cp_box .cp_container {
 	position: relative;
 	z-index: 10;
-	overflow: hidden;
-	height: 0;
+	overflow: scroll;
+  height: 20rem;
 	margin-top: -1px;
 	transition: height 0.3s ease-in-out,box-shadow 0.6s linear;
 	background: rgba(255, 255, 255, 0.5);
@@ -785,7 +850,7 @@ footer span {
 }
 /* 続きを読むを押すと表示されるテキストの高さ */
 .cp_box input:checked ~ div.cp_container {
-	height: 300px;
+	height: 50rem;
 }
 /* 「もっと表示する」機能css終わり */
 /* ======================================== */
@@ -1073,7 +1138,7 @@ input[type="checkbox"]:checked + #check {
 #btn:checked + #check {
   display:block;
 }
-/* これ以後は開いた後に表示されるもので「search_feature.html」が
+/* これ以降は開いた後に表示されるもので「search_feature.html」が
 機能としてそのまま持つ。つまり#re_search_featureをコピーすれば開いた後の
 表示を持つことができる */
  #re_search_feature {
@@ -1205,9 +1270,10 @@ input[type="checkbox"]:checked + #check {
     height: 4.5rem;
 
   }
+  /* width: 37.5rem;の設定をもつもの */
   #main_image_area, #infomation,#form1_area, #form1 ,#re_search_area,
   #narrow_search_area, #result_expression_area,
-   #natr, #overview_map, #overview, #catalog_ex, #catalog_result,
+   #natr, #overview_map, #overview,#catalog_ex, #catalog_result,
    #local_select, #re_search_button, #re_choice_button, .catalog_ex_item,
    #inform_head_area, #inform_descr_area, #contact_form_area
    {
@@ -1494,5 +1560,8 @@ input[type="checkbox"]:checked + #check {
   {
     width: 90%;
   }
-
+  /* result_deateails_feature.html */
+  .tab-label {
+    width: 25%;
+  }
 }
