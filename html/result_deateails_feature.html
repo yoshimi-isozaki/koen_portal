@@ -6,6 +6,7 @@
   <meta name="keywords" content="">
   <meta name="description" content="">
   <title>特徴|雁の巣レクリエイションセンター|（仮）公園ポータルサイト</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link rel="stylesheet"  type="text/css" href="../css/destyle.css"><!-- リセットcss -->
   <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
@@ -36,11 +37,7 @@
     <div id="space"></div>
   </div><!-- logo_caption  -->
 
-  <nav id="nav_bar">
-    <div id="logo_caption">
-    <h1>福岡県の最大級の<span>公園ポータルサイト</span></h1>
-    <div id="space"></div>
-  </div><!-- logo_caption  -->
+
 
 <div id="pc_nav_site">
   <ul id="pc_nav_site_ul">
@@ -265,7 +262,7 @@
         <div id="overview_map">
           <h3>マップ</h3>
           <div id="overview_map_exp">
-            <img src="../img/googlemap/drawable-mdpi/googlemap.png">
+            <img src="../img/googlemap/drawable-mdpi/googlemap.png" alt="">
           </div><!-- overview_map_exp -->
         </div><!-- overview_map -->
         <div id="overview_infomation">
@@ -303,7 +300,8 @@
       <div id="wordmouth_area_inc"><!-- wordmouth_area_incは「マップ」と「基本情報」を内包し幅と高さを決める -->
         <section id="wordmouth_area">
           <a href="#message">投稿はこちら</a>
-          <!-- 「もっと表示」機能https://copypet.jp/502/より -->
+
+          <!-- <? php if(口コミが存在する){ -->
           <div class="cp_box">
             <input id="cp00" type="checkbox">
             <div class="cp_container">
@@ -375,19 +373,27 @@
               </article>
             </div><!-- class="cp_container" -->
             <label for="cp00">もっと表示する</label>
-          </div><!-- class="cp_container" --><!-- 「もっと表示」機能終わり -->
+          </div><!-- class="cp_box" -->
 
-
+          <!-- } else { -->
+          <p>口コミ募集中です！</p>
+          <!-- } ?> -->
         </section><!-- wordmouth_area -->
+
+
+
+
         <section id="form_area">
           <h3 id="message">口コミを書く</h3>
           <form method="post" action="/">
             <p>
               <label for="id_title">タイトル</label>
+              <span class="require">*必須</span>
               <input id="id_title" type="text" name="title" required />
             </p>
               <label for="id_message">本文</label>
-              <textarea id="id_message" name="freeans" size="40" rows="4" cols="40"></textarea>
+              <span class="require">*必須</span>
+              <textarea id="id_message" name="freeans" rows="4" cols="40"></textarea>
             <p>
               <label>性別</label>
               <span class="form_block">
@@ -401,7 +407,8 @@
               <label>年齢</label>
               <span class="form_block">
                 <select name="年齢">
-                  <option value="" hidden>年代を選択してください</option>
+                  <option value="回答なし" hidden>年代を選択してください</option>
+                  <option value="回答なし">回答しない</option>
                   <option value="10歳未満">10歳未満</option>
                   <option value="10代">10代</option>
                   <option value="20代">20代</option>
@@ -416,7 +423,9 @@
               </select>
               </span>
             </p>
-            
+            <!-- <?php if(バリデーションエラー発生){ -->
+            <p class="require">必須項目が入力されていません</p>
+            <!-- } ?> -->
             <span id="submit">
               <input type="submit" value="投稿する" />
             </span>
