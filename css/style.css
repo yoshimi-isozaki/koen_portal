@@ -920,6 +920,7 @@ p.require {
 }
 #catalog_ex {
   width: 37.5rem;
+  padding-bottom: 1rem;
 }
 .catalog_ex_item {
   width: 35rem;
