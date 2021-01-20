@@ -25,11 +25,15 @@ body {
 
 
 #breadcrumbs {
-  padding: 1rem; 
+  @include flex($justify:center,$align:center,$wrap:nowrap);
+  padding-top: 6rem;
+  display: none; 
 }
 #breadcrumbs ol {
-  display: flex;
+  @include flex($justify:start,$align:center,$wrap:nowrap);
+  margin: 0 auto;
   color: #707070;
+  width: $width_pc;
 }
 #breadcrumbs li::after {
   content: '/';
@@ -39,7 +43,11 @@ body {
 #breadcrumbs li:last-child::after {
   display: none;
 }
-#breadcrumbs a {
+
+@media  (min-width: 1000px) {
+  #breadcrumbs {
+    display: block;
+  }
 }
 
 #nav_bar {
@@ -1244,7 +1252,7 @@ p.require {
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
-    padding: 2rem 0;
+    padding-bottom: 2rem;
     margin-bottom: 3rem;
     width: 100%;
   }
@@ -1497,7 +1505,7 @@ input[type="checkbox"]:checked + #check {
   }
   header {
     height: 4.5rem;
-
+    padding-bottom: 8rem;
   }
   #main_image_area, #infomation,#form1_area, #form1 ,#re_search_area,
   #narrow_search_area, #result_expression_area,
@@ -1519,7 +1527,8 @@ input[type="checkbox"]:checked + #check {
     background-size: cover;
     background-repeat: no-repeat;
     height: 70rem;
-    position: static;
+    position: relative;
+    top: -7rem;
     z-index: auto;
   }
   #section_search_area {
@@ -1532,7 +1541,7 @@ input[type="checkbox"]:checked + #check {
   #search_area {
     height: 47rem;
     position: relative;
-    top: -20rem;
+    top: -28rem;
   }
   #search_area h2 {
     font-size: 8.8rem;
@@ -1599,7 +1608,7 @@ input[type="checkbox"]:checked + #check {
   #pc_nav_site  {
   display: flex;
 }
-  #nav-drawer, #breadcrumbs {
+  #nav-drawer {
     display: none;
   }
   #section_re_search_area {
