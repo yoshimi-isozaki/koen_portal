@@ -1553,6 +1553,32 @@ p.require {
   font-size: 2rem;
 }
 
+@media (min-width: 1000px) {
+  #section_contact_area #contact_head_sub_section {
+    display: -webkit-box;
+    display: flex;
+    display: -ms-flexbox;
+    justify-content: space-between;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
+    align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    padding-top: 2rem;
+    background-color: #fff;
+    width: 100rem;
+  }
+  #section_contact_area #contact_head_sub_section #contact_head_area span {
+    color: #707070;
+    font-weight: bold;
+  }
+  #contact_form_area {
+    padding-top: 0;
+  }
+}
+
 /* ======================================== */
 /* privacy_policy.html */
 /* ======================================== */
