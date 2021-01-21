@@ -24,8 +24,7 @@ body {
   -ms-flex-align: center;
   flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
-  padding-top: 6rem;
-  display: none;
+  padding: 1rem;
 }
 
 #breadcrumbs ol {
@@ -42,7 +41,7 @@ body {
   -ms-flex-wrap: nowrap;
   margin: 0 auto;
   color: #707070;
-  width: 100rem;
+  width: 37.5rem;
 }
 
 #breadcrumbs li::after {
@@ -58,7 +57,10 @@ body {
 
 @media (min-width: 1000px) {
   #breadcrumbs {
-    display: block;
+    padding-top: 6rem;
+  }
+  #breadcrumbs ol {
+    width: 100rem;
   }
 }
 
@@ -1551,6 +1553,8 @@ p.require {
 }
 
 #contact_form_area {
+  font-weight: bold;
+  font-size: 1.6rem;
   padding-top: 3rem;
   width: 37.5rem;
 }
@@ -1566,6 +1570,11 @@ p.require {
   width: 35rem;
 }
 
+#contact_form_area input {
+  background-color: #fff;
+  border: 1px solid #707070;
+}
+
 #contact_form_area label {
   padding: 3rem 0 1rem 0;
   display: block;
@@ -1578,7 +1587,17 @@ p.require {
   height: 10rem;
   border: 0.1rem solid #707070;
   border-radius: 0.5rem;
-  font-size: 2rem;
+  font-weight: lighter;
+  margin-bottom: 2rem;
+}
+
+#contact_form_area input[type="submit"] {
+  color: #707070;
+  font-size: 1.6rem;
+  text-align: center;
+  line-height: 1.6rem;
+  border: 0.1rem solid #269512;
+  background-color: #fff;
 }
 
 @media (min-width: 1000px) {
@@ -1634,7 +1653,7 @@ p.require {
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
-  padding-bottom: 2rem;
+  padding: 1rem 0;
   margin-bottom: 3rem;
   width: 100%;
 }
@@ -1685,7 +1704,6 @@ p.require {
     text-align: left;
     font-size: 2rem;
     font-weight: bold;
-    padding: 1rem 0;
     margin-bottom: 3rem;
     width: 100rem;
   }
@@ -1695,6 +1713,91 @@ p.require {
   #section_privacy_area #preparer {
     width: 100rem;
     padding-top: 10rem;
+  }
+}
+
+/* ======================================== */
+/* advertising.html */
+/* ======================================== */
+#section_advert_area {
+  display: -webkit-box;
+  display: flex;
+  display: -ms-flexbox;
+  justify-content: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+}
+
+#section_advert_area p {
+  padding: 1rem 0;
+}
+
+#section_advert_area h2 {
+  color: #fff;
+  background-color: #269512;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 1rem 0;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+#section_advert_area #advert_area {
+  width: 37.5rem;
+}
+
+#section_advert_area #advert_area .advert_outer h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+  padding: 0.15rem;
+}
+
+#section_advert_area #advert_area .advert_outer p {
+  margin-bottom: 1rem;
+}
+
+#section_advert_area #advert_area .advert_outer .advert_inner h4 {
+  font-weight: bold;
+  border-left: 0.3rem solid #269512;
+  padding-left: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+#section_advert_area #advert_area .advert_outer .advert_inner p {
+  margin-bottom: 1rem;
+}
+
+#section_advert_area #advert_area .advert_outer .advert_inner #contact_form_area {
+  padding-top: 0;
+}
+
+@media (min-width: 1000px) {
+  #section_advert_area {
+    padding-top: 1rem;
+  }
+  #section_advert_area h2 {
+    color: #707070;
+    background-color: #fff;
+    text-align: left;
+    font-size: 3.2rem;
+    font-weight: bold;
+    padding: 1rem 0;
+    margin-bottom: 3rem;
+    width: 100rem;
+  }
+  #section_advert_area #advert_area {
+    width: 100rem;
+    padding-bottom: 7rem;
   }
 }
 

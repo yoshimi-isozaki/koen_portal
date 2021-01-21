@@ -26,14 +26,13 @@ body {
 
 #breadcrumbs {
   @include flex($justify:center,$align:center,$wrap:nowrap);
-  padding-top: 6rem;
-  display: none; 
+  padding: 1rem;
 }
 #breadcrumbs ol {
   @include flex($justify:start,$align:center,$wrap:nowrap);
   margin: 0 auto;
   color: #707070;
-  width: $width_pc;
+  width: $width_sp;
 }
 #breadcrumbs li::after {
   content: '/';
@@ -46,7 +45,10 @@ body {
 
 @media  (min-width: 1000px) {
   #breadcrumbs {
-    display: block;
+    padding-top: 6rem;
+    ol {
+      width: $width_pc;
+    }
   }
 }
 
@@ -833,7 +835,7 @@ footer span {
 #form_area select::-ms-expand {
   display: block;
 }
-input[type="submit"] {
+ input[type="submit"] {
   border: 1px solid #269512;
   border-radius: 0.5rem;
   background-color: #269512;
@@ -1193,6 +1195,8 @@ p.require {
   color: #fff;
 }
 #contact_form_area {
+  font-weight: bold;
+  font-size: 1.6rem;
   padding-top: 3rem;
   width: 37.5rem;
 }
@@ -1205,6 +1209,11 @@ p.require {
   height: 3rem;
   width: 35rem;
 }
+
+#contact_form_area input {
+  background-color: $color_base;
+  border: 1px solid $font_color;
+}
 #contact_form_area label {
   padding: 3rem 0 1rem 0;
   display: block;
@@ -1216,7 +1225,16 @@ p.require {
   height: 10rem;
   border: 0.1rem solid #707070;
   border-radius: 0.5rem;
-  font-size: 2rem;
+  font-weight: lighter;
+  margin-bottom: 2rem;
+}
+#contact_form_area input[type="submit"] {
+  color: $font_color;
+  font-size: 1.6rem;
+  text-align: center;
+  line-height: 1.6rem;
+  border: 0.1rem solid $color_main;
+  background-color: $color_base;
 }
 
 @media (min-width: 1000px) {
@@ -1252,7 +1270,7 @@ p.require {
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
-    padding-bottom: 2rem;
+    padding: 1rem 0;
     margin-bottom: 3rem;
     width: 100%;
   }
@@ -1301,7 +1319,6 @@ p.require {
       text-align: left;
       font-size: 2rem;
       font-weight: bold;
-      padding: 1rem 0;
       margin-bottom: 3rem;
       width: $width_pc;
     }
@@ -1311,6 +1328,79 @@ p.require {
     #preparer {
       width: $width_pc;
       padding-top: 10rem;
+    }
+  }
+}
+
+/* ======================================== */
+/* advertising.html */
+/* ======================================== */
+
+#section_advert_area {
+  @include flex($justify:center,$align:stretch,$wrap:wrap);
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  p {
+    padding: 1rem 0;
+  }
+  h2 {
+    color: $color_base;
+    background-color: $color_main;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem 0;
+    margin-bottom: 3rem;
+    width: 100%;
+  }
+  #advert_area {
+    width: $width_sp;
+    .advert_outer {
+      h3 {
+        font-size: 1.8rem;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 1rem;
+        padding: 0.15rem;
+      }
+      p {
+        margin-bottom: 1rem;
+      }
+        .advert_inner {
+          h4 {
+            font-weight: bold;
+            border-left: 0.3rem solid $color_main;
+            padding-left: 0.3rem;
+            margin-bottom: 1rem;
+          }
+          p {
+            margin-bottom: 1rem;
+          }
+          #contact_form_area {
+            padding-top: 0;
+          }
+        }
+    }
+  }
+
+}
+
+@media (min-width: 1000px) {
+  #section_advert_area {
+    padding-top: 1rem;
+    h2 {
+      color: $font_color;
+      background-color: $color_base;
+      text-align: left;
+      font-size: 3.2rem;
+      font-weight: bold;
+      padding: 1rem 0;
+      margin-bottom: 3rem;
+      width: $width_pc;
+    }
+    #advert_area {
+      width: $width_pc;
+      padding-bottom: 7rem;
     }
   }
 }
