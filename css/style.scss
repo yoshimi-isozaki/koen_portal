@@ -1481,16 +1481,15 @@ p.require {
       width: $width_pc;
     }
 
-    #terms_area {
+    #advert_area {
       width: $width_pc;
       padding-bottom: 7rem;
 
-      .terms_outer {
+      .advert_outer {
         h3 {
           font-size: 1.6rem;
         }
-
-        .terms_inner {
+        .advert_inner {
           h4 {
             font-size: 1.6rem;
           }
@@ -2082,7 +2081,7 @@ input[type="checkbox"]:checked + #check {
   #contact_form_area input,
   #contact_form_area textarea
   {
-    width: 90%;
+    width: 100%;
   }
   /* result_deateails_feature.html */
   .tab-label {

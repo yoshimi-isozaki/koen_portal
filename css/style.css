@@ -1899,14 +1899,14 @@ p.require {
     padding: 1rem 0;
     width: 100rem;
   }
-  #section_advert_area #terms_area {
+  #section_advert_area #advert_area {
     width: 100rem;
     padding-bottom: 7rem;
   }
-  #section_advert_area #terms_area .terms_outer h3 {
+  #section_advert_area #advert_area .advert_outer h3 {
     font-size: 1.6rem;
   }
-  #section_advert_area #terms_area .terms_outer .terms_inner h4 {
+  #section_advert_area #advert_area .advert_outer .advert_inner h4 {
     font-size: 1.6rem;
   }
 }
@@ -2588,7 +2588,7 @@ input[type="checkbox"]:checked + #check {
   /* contact.html */
   #contact_form_area input,
   #contact_form_area textarea {
-    width: 90%;
+    width: 100%;
   }
   /* result_deateails_feature.html */
   .tab-label {
