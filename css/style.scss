@@ -90,6 +90,12 @@ body {
   border-radius: 0.5rem;
   height: 2.5rem;
   width: 10.5rem;
+  input[type=search] {
+    // display: inline-block;
+    border-radius: 0.5rem;
+    height: 2.5rem;
+    width: 10.5rem;
+  }
 }
 #tips_link {
   padding: 0 1rem; 
@@ -205,6 +211,7 @@ body {
 }
 #nav-content_small_ul {
   width: 100%;
+  margin-top: 4rem;
 }
 #nav-content_small_ul li {
   color: #707070;
@@ -379,6 +386,12 @@ input {
   position: relative;
   top: 19px;
   left: 99px;
+
+  width: 75%;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 
@@ -863,24 +876,24 @@ p.require {
 /* 「もっと表示する」機能css */
 /* https://copypet.jp/502/よりコピペしてくる 一部改変 */
 .cp_box *, .cp_box *:before, .cp_box *:after {
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .cp_box {
-	// width: auto;
+  // width: auto;
   margin: 2em auto;
 }
 .cp_box label {
-	position: relative;
-	display: block;
-	width: 80%;
-	margin: auto;
-	padding: 0.3em 1em;
-	cursor: pointer;
-	transition: all 0.3s;
-	text-align: center;
-	color: #707070;
+  position: relative;
+  display: block;
+  width: 80%;
+  margin: auto;
+  padding: 0.3em 1em;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-align: center;
+  color: #707070;
 }
 .cp_box label:hover {
   transition: all 0.3s;
@@ -890,20 +903,20 @@ p.require {
   display: none;
 }
 .cp_box .cp_container {
-	position: relative;
-	z-index: 10;
-	overflow: scroll;
+  position: relative;
+  z-index: 10;
+  overflow: scroll;
   height: 20rem;
-	margin-top: -1px;
-	transition: height 0.3s ease-in-out,box-shadow 0.6s linear;
-	background: rgba(255, 255, 255, 0.5);
+  margin-top: -1px;
+  transition: height 0.3s ease-in-out,box-shadow 0.6s linear;
+  background: rgba(255, 255, 255, 0.5);
 }
 .cp_box input:checked ~ div {
-	transition: height 0.5s ease-in-out,box-shadow 0.1s linear;
+  transition: height 0.5s ease-in-out,box-shadow 0.1s linear;
 }
 /* 続きを読むを押すと表示されるテキストの高さ */
 .cp_box input:checked ~ div.cp_container {
-	height: 50rem;
+  height: 50rem;
 }
 /* 「もっと表示する」機能css終わり */
 
@@ -923,6 +936,7 @@ p.require {
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 20px;
+  margin-bottom: 5rem;
 }
 #catalog_result {
   width: 37.5rem;
@@ -1115,9 +1129,7 @@ p.require {
       }
     }
   }
-
 }
-
 
 /* ======================================== */
 /*  list_information.html */
@@ -1182,6 +1194,12 @@ p.require {
   position: relative;
   top: 5px;
   left: 80px;
+
+  width: 75%;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 /*
 #infomation_first {
@@ -1275,6 +1293,7 @@ p.require {
   font-size: 1.6rem;
   padding-top: 3rem;
   width: 37.5rem;
+  margin-bottom: 2rem;
 }
 #contact_form_area form {
   width: 100%;
@@ -1283,6 +1302,9 @@ p.require {
   border: 0.1rem solid #707070;
   border-radius: 0.5rem;
   height: 3rem;
+  width: 35rem;
+}
+#contact_form_area p.require {
   width: 35rem;
 }
 
@@ -1303,6 +1325,7 @@ p.require {
   border-radius: 0.5rem;
   font-weight: lighter;
   margin-bottom: 2rem;
+  font-size: 2rem;
 }
 #contact_form_area input[type="submit"] {
   color: $font_color;
@@ -1330,6 +1353,9 @@ p.require {
   }
   #contact_form_area {
     padding-top: 0;
+    p.require {
+      width: 90%;
+    }
   }
 }
 /* ======================================== */
@@ -1346,7 +1372,7 @@ p.require {
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
-    padding: 1rem 0;
+    padding: 2rem 0;
     margin-bottom: 3rem;
     width: 100%;
   }
@@ -1395,6 +1421,7 @@ p.require {
       text-align: left;
       font-size: 2rem;
       font-weight: bold;
+      padding: 1rem 0;
       margin-bottom: 3rem;
       width: $width_pc;
     }
@@ -1474,7 +1501,6 @@ p.require {
       margin-bottom: 3rem;
       width: $width_pc;
     }
-
     p {
       font-size: 1.6rem;
       padding: 1rem 0;
@@ -1519,10 +1545,9 @@ p.require {
   }
 
   #terms_area {
-  p {
-    margin-bottom: 1rem;
-  }
-  
+    p {
+      margin-bottom: 1rem;
+    }
     width: $width_sp;
     @include flex($justify:center, $align:stretch, $wrap:wrap);
     .terms_outer {
@@ -1546,6 +1571,7 @@ p.require {
       }
     }
   }
+
 }
 
 @media (min-width: 1000px) {
@@ -1592,7 +1618,6 @@ p.require {
   flex-wrap: wrap;
   width: 37.5rem;
 }
-
 /* 「条件を変更して検索する」ボタンは開閉機能を持つ。 */
 #re_search_button {
   display: flex;
@@ -2073,6 +2098,10 @@ input[type="checkbox"]:checked + #check {
     width: 55rem;
     order: 4;
   }
+  /* list_information.html */
+  .list_inform li {
+    width: 50%;
+  }
   /*  infomation.html  */
   #inform_head_area {
     background-size: 100% 100%;
@@ -2106,8 +2135,11 @@ input[type="checkbox"]:checked + #check {
     padding: 5px;
   }
 }
-.invalid-feedback {
-  color: #CC5A12;
+.invalid {
+  color: #ff3333;
+}
+.form-title {
+  font-size: 1.6rem;
 }
 
 .user_edit {
