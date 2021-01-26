@@ -1926,7 +1926,7 @@ p.require {
   -ms-flex-align: stretch;
   flex-wrap: wrap;
   -ms-flex-wrap: wrap;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   line-height: 2.5rem;
 }
 
@@ -1939,12 +1939,6 @@ p.require {
   padding: 2rem 0;
   margin-bottom: 3rem;
   width: 100%;
-}
-
-#section_terms_area p {
-  font-size: 1.2rem;
-  width: 37.5rem;
-  margin-bottom: 1rem;
 }
 
 #section_terms_area #terms_area {
@@ -1962,6 +1956,10 @@ p.require {
   -ms-flex-wrap: wrap;
 }
 
+#section_terms_area #terms_area p {
+  margin-bottom: 1rem;
+}
+
 #section_terms_area #terms_area .terms_outer h3 {
   font-size: 1.6rem;
   font-weight: bold;
@@ -1972,7 +1970,6 @@ p.require {
 }
 
 #section_terms_area #terms_area .terms_outer .terms_inner h4 {
-  font-size: 1.2rem;
   font-weight: bold;
 }
 
@@ -1980,35 +1977,30 @@ p.require {
   margin-bottom: 1rem;
 }
 
-@media (min-width: 750px) {
-  #section_terms_area p {
-    width: 750px;
-  }
-}
-
 @media (min-width: 1000px) {
   #section_terms_area {
+    font-size: 1.6rem;
     padding-top: 1rem;
   }
   #section_terms_area h2 {
     color: #707070;
+    text-align: left;
     background-color: #fff;
+    font-size: 3.2rem;
     margin-bottom: 3rem;
     width: 100rem;
   }
   #section_terms_area P {
-    font-size: 1.6rem;
     padding: 1rem 0;
-    width: 100rem;
   }
-  #section_terms_area #terms_area #advert_area {
+  #section_terms_area #terms_area {
     width: 100rem;
     padding-bottom: 7rem;
   }
-  #section_terms_area #terms_area #advert_area .terms_outer h3 {
+  #section_terms_area #terms_area .terms_outer h3 {
     font-size: 1.6rem;
   }
-  #section_terms_area #terms_area #advert_area .terms_outer h3 .terms_inner h4 {
+  #section_terms_area #terms_area .terms_outer h3 .terms_inner h4 {
     font-size: 1.6rem;
   }
 }
